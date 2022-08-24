@@ -39,7 +39,9 @@ And here. | Okay. | I think we get it.
 1. And there are numbererd lists too.
 1. Use just 1s if you want! 
 1. But the list goes on...
+
 - Even if you use dashes or asterisks.
+
 * And last but not least, let's not forget embedded images:
 
 ![Markdown Previewer](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg "Markdown Previewer")
@@ -48,15 +50,19 @@ And here. | Okay. | I think we get it.
     useEffect(() => {
         const savedMarkdown = JSON.parse(localStorage.getItem('saved'));
         if (savedMarkdown) setMarkdown(savedMarkdown);
+        else setMarkdown(demo);
     }, [setMarkdown]);
 
     return (
         <>
             { option===1 &&
-            <TextEditorArea placeholder={demo} defaultValue={markdown} onChange={(event) => {
-                setMarkdown(event.target.value)
-                localStorage.setItem('saved', JSON.stringify(markdown));
-            }} />
+            <TextEditorArea
+                defaultValue={markdown}
+                onChange={(event) => {
+                    setMarkdown(event.target.value);
+                    localStorage.setItem('saved', JSON.stringify(markdown));
+                }}
+            />
             }
         </>
     );
