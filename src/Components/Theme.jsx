@@ -8,7 +8,7 @@ const Theme = () => {
   
     return (
         <>
-            <a href="/asd" target='_blank' title='Source Code'>
+            <a href="https://github.com/gestok/markdown-previewer" target='_blank' title='Source Code'>
                 <BtnIcon>
                     <FiGithub size={20} />
                 </BtnIcon>

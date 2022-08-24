@@ -29,9 +29,13 @@ const Container = styled.div`
     position: relative;
     margin: 0 auto;
     padding: var(--g-gap-sm);
+    box-sizing: border-box;
 `;
 
 const GlobalStyle = createGlobalStyle`
+    * {
+        outline:0;
+    }
     body {
         --c-text: #AAAAAA;
         --c-link: #FF8C3E;

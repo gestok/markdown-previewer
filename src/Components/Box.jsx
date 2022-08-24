@@ -41,6 +41,7 @@ const BoxWrapper = styled.div`
 
 const BoxTitle = styled.div`
     display: flex;
+    flex-wrap: wrap;
     gap: var(--g-gap-sm);
     justify-content: space-between;
     align-items: center;
@@ -50,6 +51,9 @@ const BoxTitle = styled.div`
     background: var(--c-background);
     color: var(--c-text);
     font-weight: 500;
+    @media (max-width: 450px){
+        justify-content: center;
+    }
 `;
 
 const BoxTitleContainer = styled.div`
